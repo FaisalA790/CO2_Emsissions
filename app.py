@@ -74,19 +74,6 @@ if user_input == 'Visulization':
     st.pyplot()
     st.write(df_vehicle_class)
 
-    # Engine Sizes of Cars-------------------------------------------------------------------------------------
-    st.subheader('Engine Sizes of Cars')
-    df_engine_size = df['Engine Size(L)'].value_counts().reset_index().rename(columns={'count':'Count'})
-    plt.figure(figsize=(20, 6))
-    fig4 = sns.barplot(data=df_engine_size, x="Engine Size(L)", y="Count")
-    plt.xticks(rotation=90)
-    plt.title("All Engine Sizes")
-    plt.xlabel("Engine Size(L)")
-    plt.ylabel("Cars")
-    plt.bar_label(fig4.containers[0])
-    st.pyplot()
-    st.write(df_engine_size)
-
     # Cylinders-----------------------------------------------------------------------------------------------
     st.subheader('Cylinders')
     df_cylinders = df['Cylinders'].value_counts().reset_index().rename(columns={'count':'Count'})
