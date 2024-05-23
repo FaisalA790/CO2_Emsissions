@@ -39,7 +39,7 @@ if user_input == 'Visulization':
     st.subheader('Brands of Cars')
     df_brand = df['Make'].value_counts().reset_index().rename(columns={'count':'Count'})
     plt.figure(figsize=(15, 6))
-    fig1 = sns.barplot(data=df_brand.head(), x="Make", y="index")
+    fig1 = sns.barplot(data=df_brand.head(), x="Make", y="Count")
     plt.xticks(rotation=75)
     plt.title("Top 5 Car Companies and their Cars")
     plt.xlabel("Companies")
